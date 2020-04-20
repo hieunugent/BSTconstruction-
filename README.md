@@ -19,3 +19,6 @@
 - Search:
   - Function use to identify location of the node.
   - it can be use to swap node and remove node.
+# static Block
+  - static block is used when need to do  the computation in order to initialize static variable
+  - a static block that gets executed exactly once, when the class is first loaded.
