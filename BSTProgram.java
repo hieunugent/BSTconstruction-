@@ -27,6 +27,24 @@ class BSTProgram{
         }
       }
     }
+    public boolean contains(int value) {
+      // Write your code here.
+			if (this.value == value){
+				return true;
+			}
+			else if (this.value > value ){
+				if(left == null){return false;}
+				return left.contains(value);
+			}
+			else{
+				if (right == null){return false;}
+				return right.contains(value);
+			}
+    }
+
+    public BST remove(int value){
+      
+    }
 
   }
 
