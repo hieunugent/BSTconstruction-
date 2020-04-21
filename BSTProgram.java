@@ -43,9 +43,54 @@ class BSTProgram{
     }
 
     public BST remove(int value){
-      
+      remove(int value, null);
+      return this;
     }
+    public void remove(int value, BST parent){
+      if(this.value > value){
+        if(left != null){
+          left.remove(value, this);
+        }
+      }else if (this.value < value){
+        if(right != null){
+          right.remove(value, this);
+        }
+      }
+      else{
+        if (right != null && left != null){
+          this.value = right.getMinValue();
+          right.remove(this.value, this);
+        }
+        else if (parent == null ){
+          if (left != null){
+            this.value = left.value;
+            right = left.right;
+            left = left.left;
+          }
+          else if(right != null){
+            this.value = right.value;
+            left = right.left;
+            right = right.right;
+          }else {
 
+          }
+        }
+        else if (parent.left == this){
+          parent.left = left != null ? left :right;
+
+        }
+        else if (parent.right == this){
+          parent.right = left! = null ? left : right;
+        }
+      }
+    }
+    public int getMinValue(){
+      if(left == null){
+        return this.value;
+      }else{
+        return left.getMinValue();
+      }
+    }
   }
 
 }
