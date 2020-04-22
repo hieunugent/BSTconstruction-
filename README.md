@@ -10,8 +10,10 @@
 # Solution
 - insert:
   - value insert need to compare with current root node to consider where should it go, if greater/equal put on the right side, less than on the left side. traverse until meet leaf
+  - time complexity: O(logN)
 - contain:
   - return boolean expression, traverser through the tree, if greater/equal current node move right, less than move left, if meet num target return true else return false
+  - time complexity:O(logN)
 - Remove:
   - using search function find where num is.
   - if it is a leaf just remove it
@@ -22,5 +24,9 @@
 # static Block
   - static block is used when need to do  the computation in order to initialize static variable
   - a static block that gets executed exactly once, when the class is first loaded.
-# remove function
+# time complexity:
+  - given value will eliminate haft of tree as each time iterate through the tree
+  - for insert function the average complexity time would be O(logN)
+  - for contain function the average would be O(logN)
+  - for remove function (OLogN)
   
